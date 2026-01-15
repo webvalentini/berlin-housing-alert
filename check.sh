@@ -12,7 +12,7 @@ if [ -f previous.txt ]; then
   if [ -s diff.txt ]; then
     curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" \
       -d chat_id="$TG_CHAT_ID" \
-      -d text="🚨 New inberlinwohnen listing detected!"
+      -d text="🚨 New listing: https://www.inberlinwohnen.de/mein-bereich/wohnungsfinder"
   fi
 fi
 
