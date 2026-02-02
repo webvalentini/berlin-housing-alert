@@ -1,9 +1,9 @@
 name: InBerlinWohnen Monitor
 
-on:
-  schedule:
-    - cron: "*/5 * * * *" # runs every 2 minutes
-  workflow_dispatch: # allows manual run
+##on:
+ ## schedule:
+ ##   - cron: "*/5 * * * *" # runs every 2 minutes
+  ##workflow_dispatch: # allows manual run
 
 jobs:
   monitor:
@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run housing monitor
         run: bash check.sh
-        env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+       ## env:
+        ##  TG_TOKEN: ${{ secrets.TG_TOKEN }}
+        ##  TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
